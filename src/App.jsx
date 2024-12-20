@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import Button from './component/core/Button'
 
 function App() {
 
 
   return (
     <>
-      <h1 className='bg-red-300'>ghhgh</h1>
+      <Button>Hello</Button>
     </>
   )
 }
