@@ -4,10 +4,10 @@ import { Outlet } from 'react-router-dom'
 
 function MainLayout() {
     return (
-        <>
+        <div className='px-14 mx-auto'>
         <Header/>
         <Outlet/>
-        </>
+        </div >
     )
 }
 

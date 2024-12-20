@@ -1,8 +1,13 @@
 import React, { memo } from 'react'
+import SubHeader from '../layout/SubHeader'
 
 function MainPage() {
     return (
-        <h1>MainPage</h1>
+        <>
+          <SubHeader/>
+          <h1>MainPage</h1>
+        </>
+      
     )
 }
 
