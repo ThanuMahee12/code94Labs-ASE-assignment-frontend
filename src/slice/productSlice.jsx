@@ -14,7 +14,7 @@ const productsAdapter = createEntityAdapter({
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async (page = 1) => {
-    const response = await axios.get(`/api/products?page=${page}`);
+    const response = await axios.get(`http://localhost:800/products?page=${page}`);
     return response.data;  // Assuming the API returns a paginated response
   }
 );
@@ -22,7 +22,7 @@ export const fetchProducts = createAsyncThunk(
 export const addProduct = createAsyncThunk(
   'products/addProduct',
   async (productData) => {
-    const response = await axios.post('/api/products', productData);
+    const response = await axios.post('http://localhost:800/products', productData);
     return response.data;
   }
 );
@@ -30,7 +30,7 @@ export const addProduct = createAsyncThunk(
 export const updateProduct = createAsyncThunk(
   'products/updateProduct',
   async (updatedProduct) => {
-    const response = await axios.put(`/api/products/${updatedProduct.id}`, updatedProduct);
+    const response = await axios.put(`http://localhost:800/products/${updatedProduct.id}`, updatedProduct);
     return response.data;
   }
 );
@@ -38,7 +38,7 @@ export const updateProduct = createAsyncThunk(
 export const deleteProduct = createAsyncThunk(
   'products/deleteProduct',
   async (id) => {
-    await axios.delete(`/api/products/${id}`);
+    await axios.delete(`http://localhost:800/products/${id}`);
     return id;  // Returning the ID for the deletion
   }
 );
